@@ -54,7 +54,7 @@ main()
 ****************************************/
   /*
 #include <stdio.h>
- int bin_dec(int x,int n)     //将而进制转换成十进制
+ int bin_dec(int x,int n)     //将二进制转换成十进制
  {
    if(n==0)
      return 1;
