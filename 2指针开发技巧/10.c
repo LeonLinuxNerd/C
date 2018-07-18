@@ -1,4 +1,4 @@
-/****************************************
+﻿/****************************************
 技巧01：使用指针实现整数排序
 ****************************************/
 /*
@@ -172,7 +172,7 @@ int main(int argc, char *argv[])
 /****************************************
 技巧07：使用指针实现字符串复制(原写法会导致段错误)
 ****************************************/
-
+/*
 #include <stdio.h>
 copy(char *s,char *q)
 {
@@ -195,7 +195,7 @@ main()
   printf ("%s",p);
   return 0;
 }
-
+*/
 /****************************************
 技巧08：使用指针实现字符串的连接(和上面错误原因相同)
 ****************************************/
@@ -233,7 +233,7 @@ int main(int argc, char *argv[])
 }
 
 /****************************************
-技巧09：使用指针实现字符串插入(未成功）
+技巧09：使用指针实现字符串插入
 ****************************************/
 /*
 #include <stdio.h>
@@ -259,17 +259,37 @@ insert(char *s,char *q,int n)
     }
   str[i+1]='\0';
   return str;
+}*/
+/*修改  不可返回局部变量，声明函数指针，源程序存在段错误
+char *insert(char*s, char *p, int n, char *t)
+{
+	int i;
+	
+	for(i=0; *s!='\0'; i++){
+		if(i = n-1){
+			while(*p='\0'){
+				t[i] = *p;
+				i++;
+				p++;
+			}
+		}
+		t[i] = *s;
+		s++;
+	}
+	t[i] = '\0';
+	return t;
 }
 int main(int argc, char *argv[])
 {
-  char *strin,*str;
-  int i;
-  str="hello world!";
-  strin ="big";
+  char *s,*p;
+  int n;
+  char m[80];
+  s ="hello world!";
+  p ="big";
   printf ("please input the position you want to insert:");
   scanf("%d",&i);
-  str=insert(str,strin,i);
-  printf ("%s\n",str);
+  s=insert(s, p, n, m);
+  printf ("%s\n",s);
   return 0;
 }
 */
