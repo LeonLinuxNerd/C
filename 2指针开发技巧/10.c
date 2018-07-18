@@ -197,9 +197,8 @@ main()
 }
 
 /****************************************
-技巧08：使用指针实现字符串的连接(段错误，未成功）
+技巧08：使用指针实现字符串的连接(和上面错误原因相同)
 ****************************************/
-/*
 #include <stdio.h>
 connect(char *s,char *t,char *q)
 {
@@ -220,7 +219,9 @@ connect(char *s,char *t,char *q)
 }
 int main(int argc, char *argv[])
 {
-  char *str,*t,*p;
+ // char *str,*t,*p;
+  char *str,*t;
+  char p[100];
   str="one world";
   t="one dream";
   printf ("the first string is:%s\n",str);
@@ -230,7 +231,7 @@ int main(int argc, char *argv[])
   printf ("%s",p);
   return 0;
 }
-*/
+
 /****************************************
 技巧09：使用指针实现字符串插入(未成功）
 ****************************************/
