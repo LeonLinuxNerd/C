@@ -1,5 +1,5 @@
 ﻿/****************************************
-技巧01：冒泡排序  //程序模块化
+技巧01：冒泡排序  
 ****************************************/
 /*
 #include <stdio.h>
@@ -22,14 +22,37 @@ int main(int argc, char *argv[])
     printf ("%5d",a[i]);
   return 0;
 }
-
+*/
+/****************************************
+技巧01：冒泡排序 (优化) 
+****************************************/
+/*
+#include<stdio.h>
+void swap(int *a; int *b)
+{
+	int t;
+	t = *a;
+	*a = *b;
+	*b = t;
+}
 void bubble_sort(int arr[]; int len){
 	int i,j;
 	for(i=0; i < len - 1; i++){
 		for(j=0; j < len-1-i; i++){
 			if(arr[j] > arr[j+1])
-				swap(arr[j], arr[j + 1]);
+				swap(&arr[j], &arr[j + 1]);
 		}
+	}
+}
+int main(int argc, char *argv[])
+{
+	int i,a[10];
+	for(i=0; i<10; i++){
+		scanf("%d",a[i]);
+	}
+	bubble_sort(a, 10);
+	for(i=0; i<10; i++){
+		printf("%d\n", a[i]);
 	}
 }
 */
