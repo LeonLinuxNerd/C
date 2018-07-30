@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 {
 	int i,a[10];
 	for(i=0; i<10; i++){
-		scanf("%d",a[i]);
+		scanf("%d",&a[i]);
 	}
 	bubble_sort(a, 10);
 	for(i=0; i<10; i++){
